@@ -10,7 +10,7 @@ RUN chmod +x /usr/local/bin/bazel \
   && apt-get install -y build-essential ca-certificates
 
 RUN apt-get update \
-  && apt-get install --no-install-recommends -y git
+  && apt-get install --no-install-recommends -y git ssh
 
 RUN apt-get update \
   && apt-get install -y curl \
