@@ -1,0 +1,2 @@
+# ci-base
+egg base
