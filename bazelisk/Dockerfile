@@ -9,4 +9,6 @@ RUN chmod +x /usr/local/bin/bazel \
   && apt-get dist-upgrade -y \
   && apt-get install -y build-essential ca-certificates
 
+RUN apt-get install --no-install-recommends -y git
+
 ENTRYPOINT [ "/usr/local/bin/bazel" ]
