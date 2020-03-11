@@ -26,6 +26,8 @@ RUN apt-get update \
   && (docker version || true)
   
 RUN apt-get update \
-  && apt-get install -y python3
+  && apt-get install -y python3 \
+  && cd /usr/local/bin \
+  && ln -s /usr/bin/python3 python
 
 ENTRYPOINT [ "/usr/local/bin/bazel" ]
