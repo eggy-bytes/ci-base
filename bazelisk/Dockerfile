@@ -24,5 +24,8 @@ RUN apt-get update \
   && rm -rf /tmp/docker /tmp/docker.tgz \
   && which docker \
   && (docker version || true)
+  
+RUN apt-get update \
+  && apt-get install -y python
 
 ENTRYPOINT [ "/usr/local/bin/bazel" ]
